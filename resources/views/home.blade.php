@@ -7,7 +7,17 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <ul>
+        @foreach ($wow as $data)
+        <li>
+            {{$data -> id}}
+            {{$data -> nama}}
+            {{$data -> kelas}}
+            {{$data -> alamat}}   
+            <br><br>     
+        </li>
+        @endforeach
+    </ul>
 @stop
 
 @section('css')

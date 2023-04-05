@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('home' , ['name' => 'Agung']);
 });
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\personcontroller::class, 'index'])->name('home');
 
 
 Route::get('/', function () {
